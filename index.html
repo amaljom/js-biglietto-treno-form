@@ -9,22 +9,54 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <!-- ! NOME -->
-  <div></div>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label"> Età del passeggero</label>
-      <input type="number" class="form-control" id="user-age" aria-describedby="emailHelp">
-  <!-- ! COGNOME -->
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Km da percorrere</label>
-      <input type="number" class="form-control" id="user-km">
-    </div>
-  <!-- ! BOTTONE DI INVIO DATI AL JS -->
-    <button type="Invio Dati" id="data-acquisition" class="btn btn-primary">Submit</button>
 
-    <p>il costo del biglietto è: <span id="prezzo"></span></p>
-  </div>
+  <header >
+    <div class="top-bar">
+      <img class="img-logo" src="./img/italo.jpg" alt="NON TROVATO">
+    </div>
+  </header>
+  
+  <main class="sezione-compilazione">
+    
+    <div class="p-5 text-white">
+      <div class="d-flex justify-content-center inserimento-dati bg-light rounded-3">
+        <!-- ! nome -->
+        <div class="mb-3 p-4">
+          <input type="text" class="form-control" id="user-name" placeholder="Nome passeggero" >
+        </div>
+        <!-- ! eta -->
+        <div class="mb-3 p-4 ">
+          <input type="number" class="form-control" id="user-age" placeholder="Età del passeggero"  >
+        </div>
+        <!-- ! km -->
+        <div class="mb-3 p-4 ">
+          <input type="number" class="form-control" id="user-km" placeholder="Km che vuoi percorrere" >
+        </div>
+      </div>
+    <!-- ! BOTTONE DI INVIO DATI AL JS -->
+    <div class="text-center mt-2">
+      <button type="Invio Dati" id="data-acquisition" class="btn btn-primary">Submit</button>
+    </div>
+      
+    <div>
+      <table class="p-4 d-flex justify-content-center text-dark">
+        <tr class="bg-light">
+          <th class="p-5 border-end bg-success">Nome</th>
+          <th class="p-5">carrozza</th>
+          <th class="p-5">costo</th>
+        </tr>
+        <tr class="bg-light">
+          <td class="p-5 border-end bg-success"><span id="name-utente"></span></td>
+          <td class="p-5"><span id="carrozza"></span></td>
+          <td class="p-5"><span id="prezzo"></span></td>
+        </tr>
+      </table>
+    </div>
+  </main>
+  
+  <footer>
+
+  </footer>
     
     <script src="./js/script.js"></script>
 </body>
