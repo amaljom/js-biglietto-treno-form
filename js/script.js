@@ -10,7 +10,7 @@ dataAcquisition.addEventListener('click', function(){
 
     const pricePerKm= 0.26;
     let totalPrice= pricePerKm;
-    totalPrice= totalPrice * userDistance;
+    totalPrice *= userDistance;
 
     if( userAge < 18){
     const discount= ((totalPrice * 15) / 100);
@@ -27,7 +27,7 @@ dataAcquisition.addEventListener('click', function(){
 
     totalPrice= totalPrice.toFixed(2);
     console.log(totalPrice);
-    document.getElementById('prezzo').innerHTML = totalPrice;
+    document.getElementById('prezzo').append('€' + totalPrice);
 });
 
 
