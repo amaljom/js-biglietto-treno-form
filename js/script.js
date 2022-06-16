@@ -8,7 +8,7 @@ dataAcquisition.addEventListener('click', function(){
     const userAge = parseInt(document.getElementById('user-age').value);
     const userDistance = parseInt(document.getElementById('user-km').value);
     console.log(userAge, userDistance);
-    const carrozzaUtente = Math.floor(Math.random() * 10);
+    const carrozzaUtente = (Math.floor(Math.random() * 10)+1);
 
     const pricePerKm= 0.26;
     let totalPrice= pricePerKm;
@@ -29,9 +29,16 @@ dataAcquisition.addEventListener('click', function(){
 
     totalPrice= totalPrice.toFixed(2);
     console.log(totalPrice);
-    document.getElementById('name-utente').append(userName);
-    document.getElementById('carrozza').append(carrozzaUtente);
-    document.getElementById('prezzo').append('€' + totalPrice);
+    
+    document.getElementById('name-utente').innerHTML = userName;
+
+    
+    document.getElementById('carrozza').innerHTML = carrozzaUtente;
+
+    
+    document.getElementById('prezzo').innerHTML ='€'+ totalPrice;
+
+    
 });
 
 
